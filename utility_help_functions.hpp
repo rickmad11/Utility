@@ -33,7 +33,7 @@ int MEMORY_LEAK_INT()
 {
 	return _CrtDumpMemoryLeaks();
 }
-// ONLY DEBUG MODE this Function is is only used to satisfy std::boolalpha 
+// ONLY DEBUG MODE this Function is only used to satisfy std::boolalpha 
 bool MEMORY_LEAK_BOOL()
 {
 	return static_cast<bool>(_CrtDumpMemoryLeaks());

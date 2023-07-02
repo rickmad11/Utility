@@ -12,6 +12,9 @@ int Release_Mode_Warning = []() -> int { std::cerr << "Error: Release mode enabl
 
 #ifdef _DEBUG
 
+// when using this method keep and eye on your Output window in vs
+#define DEBUG_MEMORY_LEAK_FLAG _CrtSetDbgFlag(_CRTDBG_ALLOC_MEM_DF | _CRTDBG_LEAK_CHECK_DF);
+
 #ifdef MACRO_DEBUG_MEMORY_HELPER
 // https://learn.microsoft.com/en-us/cpp/c-runtime-library/reference/crtsetreportfile?view=msvc-170 ONLY DEBUG MODE
 #define MEMORY_LEAK_DUMP _CrtSetReportMode(_CRT_WARN,_CRTDBG_MODE_FILE);\

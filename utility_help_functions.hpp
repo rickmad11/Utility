@@ -21,9 +21,9 @@ int Release_Mode_Warning = []() -> int { std::cerr << "Error: Release mode enabl
 						 _CrtSetReportFile(_CRT_WARN, _CRTDBG_FILE_STDERR);\
 						 _CrtDumpMemoryLeaks();
 // ONLY DEBUG MODE this Macro is for if statements
-#define MEMORY_LEAK_INT _CrtDumpMemoryLeaks();
+#define MEMORY_LEAK_INT _CrtDumpMemoryLeaks()
 // ONLY DEBUG MODE this Macro is only used to satisfy std::boolalpha 
-#define MEMORY_LEAK_BOOL static_cast<bool>(_CrtDumpMemoryLeaks());
+#define MEMORY_LEAK_BOOL static_cast<bool>(_CrtDumpMemoryLeaks())
 // Breakpoint on the Location where the memory leak occurred
 #define LEAK_WHERE(LOCATION_ID) _CrtSetBreakAlloc(LOCATION_ID);
 
